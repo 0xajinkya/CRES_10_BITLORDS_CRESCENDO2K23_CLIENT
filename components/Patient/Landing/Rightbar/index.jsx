@@ -17,9 +17,8 @@ const Index = () => {
   return (
     <Box
       sx={{
-        flex: 3
-        ,
-        bgcolor: "normal",
+        flex: 3,
+        bgcolor: "white",
       }}
     >
       <Box
