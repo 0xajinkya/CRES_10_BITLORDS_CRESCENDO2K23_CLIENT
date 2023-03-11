@@ -15,7 +15,8 @@ const Index = () => {
         paddingTop: '3vh',
         display: 'flex',
         flexDirection: 'column',
-        gap: '1vh'
+        gap: '1vh',
+        backgroundColor:'#ecf5ff'
       }}
     >
       <Typography

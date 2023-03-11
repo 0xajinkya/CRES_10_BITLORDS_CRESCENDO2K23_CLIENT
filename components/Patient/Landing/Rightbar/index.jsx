@@ -157,7 +157,7 @@ const Index = () => {
                 <Typography marginTop={"20px"}>
                   your test Result are pretty fine.
                   <br />
-                  But I'll prescribe somting....to keep the condition under
+                  But I will prescribe somting....to keep the condition under
                   control
                 </Typography>
               </Typography>

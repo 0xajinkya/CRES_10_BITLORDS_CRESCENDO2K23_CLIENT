@@ -18,18 +18,6 @@ export default function App({ Component, pageProps }) {
     return <Component {...pageProps }
     />
 
-  const [hydrated, setHydrated] = useState(false)
 
-  useEffect(() => {
-    setHydrated(true)
-  }, [])
-
-  if (!hydrated) {
-    return null;
-  }
-
-
-  return <Component {...pageProps}
-  />
 
 }
