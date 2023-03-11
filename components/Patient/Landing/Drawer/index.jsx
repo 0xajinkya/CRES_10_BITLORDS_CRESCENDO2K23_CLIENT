@@ -13,11 +13,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
@@ -60,20 +55,20 @@ function ResponsiveDrawer(props) {
 
 
                     <InputBase startAdornment=<SearchRoundedIcon
-                     sx={{
-                        color: 'grey'
-                    }} /> placeholder='Search' sx={{
+                        sx={{
+                            color: 'grey'
+                        }} /> placeholder='Search' sx={{
 
-                        marginTop: '2vh',
-                        marginBottom: '2vh',
-                        // marginRight: '1vw',
-                        width: '15vw',
-                        height: '5vh',
-                        padding: '0.8vw',
-                        color: 'black',
-                        backgroundColor: '#eeeeee',
-                        borderRadius: 4
-                    }}
+                            marginTop: '2vh',
+                            marginBottom: '2vh',
+                            // marginRight: '1vw',
+                            width: '15vw',
+                            height: '5vh',
+                            padding: '0.8vw',
+                            color: 'black',
+                            backgroundColor: '#eeeeee',
+                            borderRadius: 4
+                        }}
                     />
 
 
