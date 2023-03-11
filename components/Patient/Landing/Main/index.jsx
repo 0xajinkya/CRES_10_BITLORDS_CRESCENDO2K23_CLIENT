@@ -3,6 +3,7 @@ import React from 'react'
 import ArchiveIcon from '@mui/icons-material/Archive';
 import CloseMonitoring from './Card/CloseMonitoring';
 import NextAppointment from './Card/NextAppointment';
+import History from './History';
 
 const Index = () => {
   return (
@@ -47,6 +48,7 @@ const Index = () => {
           width: '100%',
           justifyContent: 'space-between',
           marginTop: '3vh',
+          gap: '2vw'
         }}
       >
         <Box
@@ -80,6 +82,7 @@ const Index = () => {
           <NextAppointment />
         </Box>
       </Box>
+      <History />
     </Box>
   )
 }

@@ -8,7 +8,7 @@ const Index = () => {
             // boxShadow={'0px 0px 1px 1px rgba(150,150,150,0.75)'}
             // boxShadow={'1px 1px 1px 0px '}
             // border={'1px solid #fafcfe'}
-            width={'30vw'}
+            // width={'30vw'}
             height={'35vh'}
             paddingX={'2vw'}
             paddingY={'2vh'}

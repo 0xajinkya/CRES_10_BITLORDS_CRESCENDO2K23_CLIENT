@@ -16,3 +16,21 @@ body {
 select {
   padding: 5px 10px;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+  }
+  ::-webkit-scrollbar-track-piece  {
+  background-color: #ecf5ff;
+  }
+  ::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: #089AA4;
+  }
+
+
+  .css-yrdy0g-MuiDataGrid-columnHeaderRow {
+    background-color: rgba(0, 0,0, 0.05)!important;
+}
+  
