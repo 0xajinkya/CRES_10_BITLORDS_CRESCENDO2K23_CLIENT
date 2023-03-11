@@ -31,52 +31,6 @@ const Index = () => {
   }, [])
 
   return (
-<<<<<<< Updated upstream
-    <Box
-      px={2}
-      sx={{
-
-        flex: 3,
-        bgcolor: "normal",
-        flex: 3,
-        bgcolor: "white",
-
-      }}
-    >
-      <Box
-        flex={1}
-        display="flex"
-        gap={['6vh," " ,10vh']}
-        justifyContent="space-between"
-        alignItems={"screenLeft"}
-      >
-        <ArrowCircleLeftIcon
-          sx={{
-            color: "grey",
-            fontSize: "35px",
-            marginTop:'1vh'
-          }}
-        />
-        <Box
-        sx={{
-
-    
-          marginTop:'1vh'
-        }}
-        >
-          <CircleNotificationsIcon
-            sx={{
-              color: "grey",
-              fontSize: "30px",
-            }}
-          />
-          <CreateIcon
-            sx={{
-              color: "grey",
-              fontSize: "25px",
-            }}
-          />
-=======
     <>
       {patient === null ?
         <Box
@@ -85,7 +39,6 @@ const Index = () => {
           margin={'auto'}
         >
           <CircularProgress />
->>>>>>> Stashed changes
         </Box>
         :
         <Box
@@ -169,16 +122,7 @@ const Index = () => {
               <Typography>
                 Blood
                 <br />
-<<<<<<< Updated upstream
-                <Typography marginTop={"20px"}>
-                  your test Result are pretty fine.
-                  <br />
-                  But I will prescribe somting....to keep the condition under
-                  control
-                </Typography>
-=======
                 <Typography color={"#089aa4"} textAlign={'center'}>{patient?.bloodGroup}</Typography>
->>>>>>> Stashed changes
               </Typography>
             </Box>
             <Divider
@@ -313,35 +257,6 @@ const Index = () => {
             </Button>
           </Stack>
         </Box> */}
-<<<<<<< Updated upstream
-        <Box
-          display={'flex'}
-          flexDirection={'column'}
-          mt={3}
-          gap={'1vw'}
-        // alignItems={'flex-start'}
-        paddingBottom={'1vw'}
-        >
-          <Button
-            sx={{
-              border: '1px solid rgba(0, 0, 0, 0.2)',
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              paddingLeft: '3vw',
-              borderRadius: '10px',
-              gap: '1vw',
-              color: '#089AA4',
-              paddingY: '15px',
-              ":hover": {
-                backgroundColor: '#089AA4',
-                color: 'white'
-              }
-            }}
-          >
-=======
->>>>>>> Stashed changes
             <Box
               display={'flex'}
               flexDirection={'column'}
@@ -350,86 +265,6 @@ const Index = () => {
             // alignItems={'flex-start'}
             // paddingLeft={'5vw'}
             >
-<<<<<<< Updated upstream
-              <SickOutlinedIcon />
-              Diseases
-            </Box>
-            <ArrowLeft
-              sx={{
-                transform: 'rotate(180deg)'
-              }}
-            />
-
-          </Button>
-          <Button
-            sx={{
-              border: '1px solid rgba(0, 0, 0, 0.2)',
-              width: '100%',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              paddingLeft: '3vw',
-              borderRadius: '10px',
-              gap: '1vw',
-              color: '#089AA4',
-              paddingY: '15px',
-              ":hover": {
-                backgroundColor: '#089AA4',
-                color: 'white'
-              }
-            }}
-          >
-            <Box
-              display={'flex'}
-              alignItems={'center'}
-              gap={'0.7vw'}
-            >
-              <LocalHospitalOutlinedIcon />
-              My Visits
-            </Box>
-            <ArrowLeft
-              sx={{
-                transform: 'rotate(180deg)'
-              }}
-            />
-          </Button>
-          <Button sx={{
-            border: '1px solid rgba(0, 0, 0, 0.2)',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingLeft: '3vw',
-            borderRadius: '10px',
-            gap: '1vw',
-            color: '#089AA4',
-            paddingY: '15px',
-            ":hover": {
-              backgroundColor: '#089AA4',
-              color: 'white'
-            }
-          }}
-          >
-            <Box
-              display={'flex'}
-              alignItems={'center'}
-              gap={'0.7vw'}
-            >
-              <FavoriteBorderIcon />
-              Health Monitor
-
-            </Box> <ArrowLeft
-              sx={{
-                transform: 'rotate(180deg)'
-              }}
-            />
-          </Button>
-        </Box>
-      </Box>
-    </Box>
-
-
-=======
               <Button
                 sx={{
                   border: '1px solid rgba(0, 0, 0, 0.2)',
@@ -531,7 +366,6 @@ const Index = () => {
         </Box>
       }
     </>
->>>>>>> Stashed changes
   );
 };
 
