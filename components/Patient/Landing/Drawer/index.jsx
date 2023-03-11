@@ -38,7 +38,7 @@ function ResponsiveDrawer(props) {
     };
 
     const drawer = (
-     
+
 
         <Box
             sx={{
@@ -52,22 +52,22 @@ function ResponsiveDrawer(props) {
             <List>
 
 
-                    <InputBase startAdornment=<SearchRoundedIcon sx={{
-                        color:'grey'
-                    }}/>    placeholder='Search'  sx={{
+                <InputBase startAdornment=<SearchRoundedIcon sx={{
+                    color: 'grey'
+                }} /> placeholder='Search' sx={{
 
-                        marginTop:'2vh',
-                        marginBottom:'2vh',
-                        marginLeft:'0.5vw',
-                        width: '15vw',
-                        height: '5vh',
-                        padding: '0.8vw',
-                        color: 'black',
-                        backgroundColor:'#eeeeee',
-                       
-                        borderRadius: 4,
-                    }} />
-                
+                    marginTop: '2vh',
+                    marginBottom: '2vh',
+                    marginLeft: '0.5vw',
+                    width: '15vw',
+                    height: '5vh',
+                    padding: '0.8vw',
+                    color: 'black',
+                    backgroundColor: '#eeeeee',
+
+                    borderRadius: 4,
+                }} />
+
 
 
                 <ListItemButton>
@@ -102,7 +102,7 @@ function ResponsiveDrawer(props) {
                 </ListItemButton>
 
             </List>
-            
+
             <List>
                 {['Settings', 'Log out'].map((text, index) => (
                     <ListItem key={text} disablePadding>
