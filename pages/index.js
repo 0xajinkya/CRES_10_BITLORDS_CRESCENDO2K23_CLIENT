@@ -8,11 +8,11 @@ import Landing from '../components/Patient/Landing';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return (
-    <Box
-      minWidth={'100vw'}
-    >
-      <Landing />
-    </Box>
-  )
+    return ( <
+        Box minWidth = { '100vw' } >
+        <
+        Landing / >
+        <
+        /Box>
+    )
 }

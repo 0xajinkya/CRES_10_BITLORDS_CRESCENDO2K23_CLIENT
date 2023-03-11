@@ -1,17 +1,133 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import {
+  Avatar,
+  Box,
+  Card,
+  CardContent,
+  Divider,
+  Typography,
+} from "@mui/material";
+
+import React from "react";
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
+import CreateIcon from "@mui/icons-material/Create";
+//import InboxIcon from '@material-ui/icons/Inbox';
 
 const Index = () => {
   return (
     <Box
-        sx={{
-            flex: 2,
-            minHeight: '100vh',    
-        }}
+      sx={{
+        flex: 2,
+        bgcolor: "normal",
+      }}
     >
-        Rightbar
+      <Box
+        flex={1}
+        display="flex"
+        gap={['6vh," " ,10vh']}
+        justifyContent="space-between"
+        alignItems={"screenLeft"}
+      >
+        <ArrowCircleLeftIcon
+          sx={{
+            color: "grey",
+            fontSize: "40px",
+          }}
+        />
+        <Box>
+          <CircleNotificationsIcon
+            sx={{
+              color: "grey",
+              fontSize: "40px",
+            }}
+          />
+          <CreateIcon
+            sx={{
+              color: "grey",
+              fontSize: "40px",
+            }}
+          />
+        </Box>
+      </Box>
+      <Box mt={10}>
+        <Avatar
+          sx={{
+            bgcolor: "purple",
+            width: "100px",
+            height: "100px",
+            margin: "auto",
+            fontSize: "20px",
+          }}
+        >
+          M
+        </Avatar>
+        <Typography
+          fontSize={["15px", "25px"]}
+          textAlign="center"
+          marginTop={"30px"}
+        >
+          Monika Wrobel
+        </Typography>
+        <Typography marginTop={"auto"} textAlign="center">
+          35 years
+        </Typography>
+      </Box>
+      <Box
+        display={"flex"}
+        flexDirection={"row"}
+        justifyContent={"space-between"}
+        paddingX={"1vw"}
+        marginY={"30px"}
+      >
+        <Box display={"flex"} flexDirection={"column"}>
+          <Typography>
+            Blood
+            <br />
+            <Typography color={"#089aa4"}>A Rh+</Typography>
+          </Typography>
+        </Box>
+        <Divider
+          orientation="vertical"
+          sx={{
+            height: "55px",
+          }}
+        />
+        <Box display={"flex"} flexDirection={"column"}>
+          {" "}
+          <Typography>
+            Height
+            <br />
+            <Typography color={"#089aa4"}>160cm</Typography>
+          </Typography>
+        </Box>
+        <Divider
+          orientation="vertical"
+          sx={{
+            height: "55px",
+          }}
+        />
+        <Box display={"flex"} flexDirection={"column"}>
+          <Typography>
+            weight
+            <br />
+            <Typography color={"#089aa4"}>22kg</Typography>
+          </Typography>
+        </Box>
+      </Box>
+      <Box>
+        <Card>
+          <CardContent>
+            <Typography sx={{ fondsiz: "14px", color: "black" }}>
+              Dr.Pawel Kowalski
+            </Typography>
+            <Typography>
+              02.11.2022
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

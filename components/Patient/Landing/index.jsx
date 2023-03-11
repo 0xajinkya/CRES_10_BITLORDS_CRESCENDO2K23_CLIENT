@@ -9,7 +9,6 @@ const Index = () => {
     <Box
         sx={{
             display: 'flex',
-            // paddingX: '1vw'
         }}
     >
         <Sidebar />
