@@ -1,6 +1,5 @@
 import { Box, Button, Checkbox, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
 import React from 'react'
-import { DataGrid } from '@mui/x-data-grid';
 import Link from 'next/link';
 
 const Index = () => {

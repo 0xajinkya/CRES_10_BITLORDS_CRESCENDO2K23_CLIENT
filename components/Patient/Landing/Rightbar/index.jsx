@@ -11,13 +11,14 @@ import React from "react";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import CreateIcon from "@mui/icons-material/Create";
-//import InboxIcon from '@material-ui/icons/Inbox';
+import InboxIcon from "@mui/icons-material/Inbox";
 
 const Index = () => {
   return (
     <Box
       sx={{
-        flex: 2,
+        flex: 3
+        ,
         bgcolor: "normal",
       }}
     >
@@ -31,20 +32,20 @@ const Index = () => {
         <ArrowCircleLeftIcon
           sx={{
             color: "grey",
-            fontSize: "40px",
+            fontSize: "35px",
           }}
         />
         <Box>
           <CircleNotificationsIcon
             sx={{
               color: "grey",
-              fontSize: "40px",
+              fontSize: "35px",
             }}
           />
           <CreateIcon
             sx={{
               color: "grey",
-              fontSize: "40px",
+              fontSize: "35px",
             }}
           />
         </Box>
@@ -114,15 +115,52 @@ const Index = () => {
           </Typography>
         </Box>
       </Box>
-      <Box>
+      <Box
+        flex={1}
+        display="flex"
+        gap={['6vh," " ,10vh']}
+        justifyContent="space-between"
+        alignItems={"screenLeft"}
+      >
         <Card>
           <CardContent>
-            <Typography sx={{ fondsiz: "14px", color: "black" }}>
-              Dr.Pawel Kowalski
-            </Typography>
-            <Typography>
-              02.11.2022
-            </Typography>
+            <Box
+              display={'flex'}
+              alignItems={'center'}
+              justifyContent={'space-between'}
+            >
+              <Box>
+                <Typography sx={{ fondsiz: "14px", color: "black" }}>
+                  Dr.Pawel Kowalski
+                </Typography>
+                <Typography>02.11.2022</Typography>
+              </Box>
+              <InboxIcon
+                sx={{
+                  color: "#089aa4",
+                  fontSize: "40px",
+                }}
+              />
+            </Box>
+            <Divider
+              orientation="horizontal"
+              sx={{
+                height: "60px",
+              }}
+            />
+            <Box>
+              <Typography paddingX={"1vw"}>
+                Hello Monical
+                <br />
+                
+                <Typography marginTop={"20px"}>
+                  your test Result are pretty fine.
+                  <br />
+                  But I'll prescribe somting....to keep the condition under
+                  control
+                </Typography>
+              </Typography>
+            </Box>
           </CardContent>
         </Card>
       </Box>
