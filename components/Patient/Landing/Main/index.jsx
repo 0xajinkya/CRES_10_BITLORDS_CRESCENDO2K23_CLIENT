@@ -35,7 +35,7 @@ const Index = () => {
           fontFamily: 'Poppins'
         }}
       >
-        You've got a message from Dr. Pawel. Check your inbox!
+        You&apos;ve got a message from Dr. Pawel. Check your inbox!
         <ArchiveIcon
           sx={{
             color: '#089aa4'
