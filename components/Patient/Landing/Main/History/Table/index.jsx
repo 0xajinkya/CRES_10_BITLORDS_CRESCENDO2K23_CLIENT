@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <Table
       sx={{
-        width: '100%'
+        width: '100%',
       }}
     >
       <TableContainer

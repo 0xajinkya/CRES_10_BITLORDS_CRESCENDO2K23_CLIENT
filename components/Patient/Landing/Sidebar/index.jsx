@@ -12,7 +12,7 @@ const Index = () => {
             minHeight: '100vh',
 
             backgroundColor:'white',
-            borderRight: '1px solid #bdbdbd'
+            // borderRight: '1px solid #bdbdbd'
 
         }}
     >
