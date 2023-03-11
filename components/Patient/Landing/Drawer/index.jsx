@@ -64,9 +64,9 @@ function ResponsiveDrawer(props) {
                     padding: '0.8vw',
                     color: 'black',
                     backgroundColor: '#eeeeee',
-
-                    borderRadius: 4,
-                }} />
+                    borderRadius: 4
+                }} 
+                />
 
 
 
@@ -134,7 +134,7 @@ function ResponsiveDrawer(props) {
             >
 
             </AppBar>
-            <Box
+            <Box    
                 component="nav"
                 sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
                 aria-label="mailbox folders"

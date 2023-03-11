@@ -20,6 +20,7 @@ const Index = () => {
         flex: 3
         ,
         bgcolor: "normal",
+        // width:'vw'
       }}
     >
       <Box
