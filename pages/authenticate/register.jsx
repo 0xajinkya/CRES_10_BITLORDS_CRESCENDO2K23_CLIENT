@@ -2,7 +2,7 @@ import { Box, Button, InputBase, Typography } from '@mui/material'
 import React from 'react'
 import Lottie from 'lottie-react';
 import Register from '../../lotties/Register.json'
-import { CalendarMonth, Email, Lock, Person } from '@mui/icons-material';
+import { CalendarMonth, Email, LockOpen, Person } from '@mui/icons-material';
 
 const Index = () => {
   return (
@@ -69,7 +69,40 @@ const Index = () => {
               mt: 1
             }}
           />
-          
+          <InputBase 
+            startAdornment={<Email
+              sx={{
+                color: 'grey',
+                mx: 2
+              }}
+            />}
+            placeholder='email'
+            sx={{
+              border: '1px solid #089AA4',
+              paddingX: '10px',
+              paddingY: '5px',
+              borderRadius: '25px',
+              width: '20vw',
+              color: 'black'
+            }}
+          />
+          <InputBase 
+            startAdornment={<LockOpen 
+              sx={{
+                color: 'grey',
+                mx: 2
+              }}
+            />}
+            placeholder='password'
+            sx={{
+              border: '1px solid #089AA4',
+              paddingX: '10px',
+              paddingY: '5px',
+              borderRadius: '25px',
+              width: '20vw',
+              color: 'black'
+            }}
+          />
           
           <InputBase 
             startAdornment={<CalendarMonth
@@ -105,7 +138,10 @@ const Index = () => {
           >
             Register
           </Button>
-        </Box>
+         
+           
+            
+       </Box>
       </Box>
     </Box>
   )
