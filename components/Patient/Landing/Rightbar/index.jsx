@@ -225,7 +225,7 @@ const Index = () => {
                       fontSize={'13.5px'}
                     >
                       Your test Result are pretty fine.
-                      But I'll prescribe somting....to keep the condition under
+                      But I&apos;ll prescribe somting....to keep the condition under
                       control
                     </Typography>
                   </Typography>
