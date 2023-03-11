@@ -1,7 +1,7 @@
 import { Box, Button, InputBase, Typography } from '@mui/material'
 import React from 'react'
 import Lottie from 'lottie-react';
-import Login from '../../lotties/Login.json'
+import Register from '../../lotties/Register.json'
 import { CalendarMonth, Email, Lock, Person } from '@mui/icons-material';
 
 const Index = () => {
@@ -31,7 +31,7 @@ const Index = () => {
 
         >
           <Lottie 
-            animationData={Login}
+            animationData={Register}
             style={{
               height: '400px'
             }}
