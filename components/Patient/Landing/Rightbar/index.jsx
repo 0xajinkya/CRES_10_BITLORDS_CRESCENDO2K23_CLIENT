@@ -128,6 +128,7 @@ const Index = () => {
         gap={['6vh," " ,10vh']}
         justifyContent="space-between"
         alignItems={"screenLeft"}
+        bgcolor={'transparent'}
       >
         <Card>
           <CardContent>
@@ -289,7 +290,7 @@ const Index = () => {
               alignItems={'center'}
               gap={'0.7vw'}
             >
-            <LocalHospitalOutlinedIcon />
+            <FavoriteBorderIcon  />
             Health Monitor
           
           </Box> <ArrowLeft 
