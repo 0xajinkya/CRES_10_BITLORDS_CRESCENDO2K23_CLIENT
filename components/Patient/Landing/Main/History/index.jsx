@@ -1,5 +1,5 @@
 import { Search, Share } from '@mui/icons-material';
-import { Box, Button, InputBase, Typography } from '@mui/material';
+import { Box, Button, Hidden, InputBase, Typography } from '@mui/material';
 import React from 'react'
 import Table from './Table';
 
@@ -14,6 +14,7 @@ const Index = () => {
         paddingY: '2vh',
         height: '60vh',
         overflowY: 'scroll',
+        // overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
         gap: '3vh'

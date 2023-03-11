@@ -51,25 +51,25 @@ function ResponsiveDrawer(props) {
         >
             <List>
 
+                <Box
+                    sx={{
+                        paddingX: '1vw',
+                        paddingRight: '1vw'
+                    }}
+                >
+                    <InputBase startAdornment={<SearchRoundedIcon sx={{
+                        color: 'grey'
+                    }} />} placeholder='Search' sx={{
+                        marginY: '2vh',
+                        height: '5vh',
+                        padding: '0.8vw',
+                        color: 'black',
+                        backgroundColor: '#eeeeee',
 
-                <InputBase startAdornment=<SearchRoundedIcon sx={{
-                    color: 'grey'
-                }} /> placeholder='Search' sx={{
-
-                    marginTop: '2vh',
-                    marginBottom: '2vh',
-                    marginLeft: '0.5vw',
-                    width: '15vw',
-                    height: '5vh',
-                    padding: '0.8vw',
-                    color: 'black',
-                    backgroundColor: '#eeeeee',
-
-                    borderRadius: 4,
-                }} />
-
-
-
+                        borderRadius: 4,
+                    }}
+                    />
+                </Box>
                 <ListItemButton>
                     <ListItemIcon>
                         <HomeRoundedIcon />
