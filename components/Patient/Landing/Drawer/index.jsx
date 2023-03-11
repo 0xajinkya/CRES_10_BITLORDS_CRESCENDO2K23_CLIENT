@@ -66,7 +66,7 @@ function ResponsiveDrawer(props) {
 
                         marginTop: '2vh',
                         marginBottom: '2vh',
-                        marginLeft: '0.5vw',
+                        // marginRight: '1vw',
                         width: '15vw',
                         height: '5vh',
                         padding: '0.8vw',

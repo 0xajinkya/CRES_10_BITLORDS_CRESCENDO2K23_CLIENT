@@ -25,10 +25,8 @@ const Index = () => {
       px={2}
       sx={{
 
-        flex: 3
-        ,
+        flex: 3,
         bgcolor: "normal",
-
         flex: 3,
         bgcolor: "white",
 
@@ -45,19 +43,26 @@ const Index = () => {
           sx={{
             color: "grey",
             fontSize: "35px",
+            marginTop:'1vh'
           }}
         />
-        <Box>
+        <Box
+        sx={{
+
+    
+          marginTop:'1vh'
+        }}
+        >
           <CircleNotificationsIcon
             sx={{
               color: "grey",
-              fontSize: "35px",
+              fontSize: "30px",
             }}
           />
           <CreateIcon
             sx={{
               color: "grey",
-              fontSize: "35px",
+              fontSize: "25px",
             }}
           />
         </Box>
@@ -207,7 +212,7 @@ const Index = () => {
           mt={3}
           gap={'1vw'}
         // alignItems={'flex-start'}
-        // paddingLeft={'5vw'}
+        paddingBottom={'1vw'}
         >
           <Button
             sx={{
