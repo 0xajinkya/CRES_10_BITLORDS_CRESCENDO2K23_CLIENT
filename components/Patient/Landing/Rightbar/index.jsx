@@ -1,9 +1,11 @@
 import {
   Avatar,
   Box,
+  Button,
   Card,
   CardContent,
   Divider,
+  Stack,
   Typography,
 } from "@mui/material";
 
@@ -12,15 +14,24 @@ import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import CreateIcon from "@mui/icons-material/Create";
 import InboxIcon from "@mui/icons-material/Inbox";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import SickOutlinedIcon from "@mui/icons-material/SickOutlined";
+import LocalHospitalOutlinedIcon from "@mui/icons-material/LocalHospitalOutlined";
+import { ArrowLeft } from "@mui/icons-material";
 
 const Index = () => {
   return (
     <Box
+      px={2}
       sx={{
+
         flex: 3
         ,
         bgcolor: "normal",
-        // width:'vw'
+
+        flex: 3,
+        bgcolor: "white",
+
       }}
     >
       <Box
@@ -119,16 +130,18 @@ const Index = () => {
       <Box
         flex={1}
         display="flex"
+        flexDirection={'column'}
         gap={['6vh," " ,10vh']}
         justifyContent="space-between"
         alignItems={"screenLeft"}
+        bgcolor={'transparent'}
       >
         <Card>
           <CardContent>
             <Box
-              display={'flex'}
-              alignItems={'center'}
-              justifyContent={'space-between'}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"space-between"}
             >
               <Box>
                 <Typography sx={{ fondsiz: "14px", color: "black" }}>
@@ -153,7 +166,6 @@ const Index = () => {
               <Typography paddingX={"1vw"}>
                 Hello Monical
                 <br />
-                
                 <Typography marginTop={"20px"}>
                   your test Result are pretty fine.
                   <br />
@@ -164,8 +176,140 @@ const Index = () => {
             </Box>
           </CardContent>
         </Card>
+        {/* <Box>
+          <Stack direction="row" spacing={2}>
+            <Button
+              sx={{
+                border: '1px solid #089AA4',
+                borderRadius: '20px',
+                paddingX: '20px',
+                paddingY: '5px',
+                fontSize: '13px'
+              }}
+            >
+              <SickOutlinedIcon />
+              Diseases
+            </Button>
+            <Button
+
+              startIcon={<LocalHospitalOutlinedIcon />}
+            >
+              My visits
+            </Button>
+            <Button startIcon={<FavoriteBorderIcon />}>
+              Health Monitor
+            </Button>
+          </Stack>
+        </Box> */}
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          mt={3}
+          gap={'1vw'}
+        // alignItems={'flex-start'}
+        // paddingLeft={'5vw'}
+        >
+          <Button
+            sx={{
+              border: '1px solid rgba(0, 0, 0, 0.2)',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              paddingLeft: '3vw',
+              borderRadius: '10px',
+              gap: '1vw',
+              color: '#089AA4',
+              paddingY: '15px',
+              ":hover": {
+                backgroundColor: '#089AA4',
+                color: 'white'
+              }
+            }}
+          >
+            <Box
+              display={'flex'}
+              alignItems={'center'}
+              gap={'0.7vw'}
+            >
+              <SickOutlinedIcon />
+              Diseases
+            </Box>
+            <ArrowLeft
+              sx={{
+                transform: 'rotate(180deg)'
+              }}
+            />
+
+          </Button>
+          <Button
+            sx={{
+              border: '1px solid rgba(0, 0, 0, 0.2)',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              paddingLeft: '3vw',
+              borderRadius: '10px',
+              gap: '1vw',
+              color: '#089AA4',
+              paddingY: '15px',
+              ":hover": {
+                backgroundColor: '#089AA4',
+                color: 'white'
+              }
+            }}
+          >
+            <Box
+              display={'flex'}
+              alignItems={'center'}
+              gap={'0.7vw'}
+            >
+              <LocalHospitalOutlinedIcon />
+              My Visits
+            </Box>
+            <ArrowLeft
+              sx={{
+                transform: 'rotate(180deg)'
+              }}
+            />
+          </Button>
+          <Button sx={{
+            border: '1px solid rgba(0, 0, 0, 0.2)',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingLeft: '3vw',
+            borderRadius: '10px',
+            gap: '1vw',
+            color: '#089AA4',
+            paddingY: '15px',
+            ":hover": {
+              backgroundColor: '#089AA4',
+              color: 'white'
+            }
+          }}
+          >
+            <Box
+              display={'flex'}
+              alignItems={'center'}
+              gap={'0.7vw'}
+            >
+              <FavoriteBorderIcon />
+              Health Monitor
+
+            </Box> <ArrowLeft
+              sx={{
+                transform: 'rotate(180deg)'
+              }}
+            />
+          </Button>
+        </Box>
       </Box>
     </Box>
+
+
   );
 };
 

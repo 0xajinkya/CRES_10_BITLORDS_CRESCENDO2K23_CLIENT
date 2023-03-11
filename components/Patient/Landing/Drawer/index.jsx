@@ -51,24 +51,38 @@ function ResponsiveDrawer(props) {
         >
             <List>
 
-
-                <InputBase startAdornment=<SearchRoundedIcon sx={{
-                    color: 'grey'
-                }} /> placeholder='Search' sx={{
-
-                    marginTop: '2vh',
-                    marginBottom: '2vh',
-                    marginLeft: '0.5vw',
-                    width: '15vw',
-                    height: '5vh',
-                    padding: '0.8vw',
-                    color: 'black',
-                    backgroundColor: '#eeeeee',
-                    borderRadius: 4
-                }} 
-                />
+                <Box
+                    sx={{
+                        paddingX: '1vw',
+                        paddingRight: '1vw'
+                    }}
+                >
 
 
+                    <InputBase startAdornment=<SearchRoundedIcon
+                     sx={{
+                        color: 'grey'
+                    }} /> placeholder='Search' sx={{
+
+                        marginTop: '2vh',
+                        marginBottom: '2vh',
+                        marginLeft: '0.5vw',
+                        width: '15vw',
+                        height: '5vh',
+                        padding: '0.8vw',
+                        color: 'black',
+                        backgroundColor: '#eeeeee',
+                        borderRadius: 4
+                    }}
+                    />
+
+
+
+
+
+
+
+                </Box>
 
                 <ListItemButton>
                     <ListItemIcon>
@@ -134,7 +148,7 @@ function ResponsiveDrawer(props) {
             >
 
             </AppBar>
-            <Box    
+            <Box
                 component="nav"
                 sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
                 aria-label="mailbox folders"
