@@ -1,5 +1,7 @@
 import { Box } from '@mui/material'
 import React from 'react'
+// import InputBase from '@mui/material/InputBase';i
+import Drawer from '../Drawer';
 
 const Index = () => {
   return (
@@ -9,10 +11,12 @@ const Index = () => {
             bgcolor: 'red',
             minHeight: '100vh',
 
-            
+            backgroundColor:'white',
+            borderRight: '1px solid #bdbdbd'
+
         }}
     >
-        Sidebar
+      <Drawer/>
     </Box>
   )
 }
