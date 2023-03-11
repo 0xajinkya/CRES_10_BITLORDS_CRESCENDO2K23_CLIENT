@@ -13,11 +13,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
@@ -26,6 +21,7 @@ import LocalHospitalRoundedIcon from '@mui/icons-material/LocalHospitalRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import TimelineRoundedIcon from '@mui/icons-material/TimelineRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import { useRouter } from 'next/router';
 
 const drawerWidth = 240;
 
@@ -37,8 +33,11 @@ function ResponsiveDrawer(props) {
         setMobileOpen(!mobileOpen);
     };
 
+
+    const router = useRouter();
+
     const drawer = (
-     
+
 
         <Box
             sx={{
@@ -51,24 +50,38 @@ function ResponsiveDrawer(props) {
         >
             <List>
 
+                <Box
+                    sx={{
+                        paddingX: '1vw',
+                        paddingRight: '1vw'
+                    }}
+                >
 
-                    <InputBase startAdornment=<SearchRoundedIcon sx={{
-                        color:'grey'
-                    }}/>    placeholder='Search'  sx={{
 
-                        marginTop:'2vh',
-                        marginBottom:'2vh',
-                        marginLeft:'0.5vw',
-                        width: '15vw',
-                        height: '5vh',
-                        padding: '0.8vw',
-                        color: 'black',
-                        backgroundColor:'#eeeeee',
-                       
-                        borderRadius: 4,
-                    }} />
-                
+                    <InputBase startAdornment=<SearchRoundedIcon
+                        sx={{
+                            color: 'grey'
+                        }} /> placeholder='Search' sx={{
 
+                            marginTop: '2vh',
+                            marginBottom: '2vh',
+                            // marginRight: '1vw',
+                            width: '15vw',
+                            height: '5vh',
+                            padding: '0.8vw',
+                            color: 'black',
+                            backgroundColor: '#eeeeee',
+                            borderRadius: 4
+                        }}
+                    />
+
+
+
+
+
+
+
+                </Box>
 
                 <ListItemButton>
                     <ListItemIcon>
@@ -102,18 +115,27 @@ function ResponsiveDrawer(props) {
                 </ListItemButton>
 
             </List>
-            
+
             <List>
-                {['Settings', 'Log out'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <SettingsIcon /> : <LogoutRoundedIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                <ListItem key={'Settings'} disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <SettingsIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={'Settings'} />
+                    </ListItemButton>
+                </ListItem>
+
+                <ListItem key={'Log Out'} disablePadding>
+                    <ListItemButton
+                        onClick={() => {localStorage.removeItem('patient'); router.replace('/authenticate')}}
+                    >
+                        <ListItemIcon>
+                            <LogoutRoundedIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={'Log Out'} />
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
 
