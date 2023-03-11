@@ -1,11 +1,20 @@
 import { Box, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ArchiveIcon from '@mui/icons-material/Archive';
 import CloseMonitoring from './Card/CloseMonitoring';
 import NextAppointment from './Card/NextAppointment';
 import History from './History';
 
 const Index = () => {
+
+  const [patient, setPatient] = useState();
+
+    useEffect(() => {
+        const patients = localStorage.getItem('patient')
+        console.log(patients)
+        setPatient(JSON.parse(patients));
+    }, [])
+
   return (
     <Box
       sx={{
@@ -26,7 +35,7 @@ const Index = () => {
           fontWeight: 500
         }}
       >
-        Welcome, User
+        Welcome, {patient.name}
       </Typography>
       <Typography
         sx={{
