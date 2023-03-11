@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
+import Landing from '../../components/Patient/Landing';
 
 const Index = () => {
   return (
@@ -8,7 +9,7 @@ const Index = () => {
         minWidth={'100vw'}
         minHeight={'100vh'}
     >
-        
+        <Landing />
     </Box>
   )
 }

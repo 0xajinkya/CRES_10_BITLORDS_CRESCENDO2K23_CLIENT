@@ -106,7 +106,7 @@ const Index = () => {
               {patient?.name}
             </Typography>
             <Typography marginTop={"auto"} textAlign="center">
-              35 years
+              {patient.age} Yrs
             </Typography>
           </Box>
           <Box
@@ -165,7 +165,7 @@ const Index = () => {
             alignItems={"screenLeft"}
             bgcolor={'transparent'}
           >
-            <Card
+            {/* <Card
               sx={{
                 borderRadius: '20px'
               }}
@@ -231,7 +231,7 @@ const Index = () => {
                   </Typography>
                 </Box>
               </CardContent>
-            </Card>
+            </Card> */}
             {/* <Box>
           <Stack direction="row" spacing={2}>
             <Button

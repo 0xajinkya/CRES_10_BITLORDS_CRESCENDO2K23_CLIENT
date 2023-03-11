@@ -1,8 +1,32 @@
 import QueryBuilderIcon from '@mui/icons-material/QueryBuilder'; import { Avatar, Box, Button, MenuItem, Select, Typography } from '@mui/material'
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 
 const Index = () => {
+
+    const [patient, setPatient] = useState();
+    const [details, setDetails] = useState();
+
+    useEffect(() => {
+        const patients = localStorage.getItem('patient')
+        console.log(patients)
+        setPatient(JSON.parse(patients));
+    }, [])
+
+    useEffect(() => {
+        const fetchDetails = async () => {
+            try {
+                const res = await axios.get(`http://localhost:5001/appointment/get?id=${patient?.appointments[0]}`)
+                console.log(res.data)
+                setDetails(res.data);
+            } catch (error) {
+                console.log('No appoinments for today!')
+            }
+        }
+        fetchDetails();
+    }, [patient])
+
     return (
         <Box
             borderRadius={'15px'}
@@ -20,7 +44,7 @@ const Index = () => {
                 fontWeight={500}
                 fontFamily={'Poppins'}
             >
-                Friday, 19th March
+                {details?.date}
             </Typography>
             <Typography
                 display={'flex'}
@@ -34,7 +58,7 @@ const Index = () => {
                         fontSize: '15px'
                     }}
                 />
-                11:30 - 12:00 pm(30 min)
+                {details?.fromTime} - {details?.toTime}
             </Typography>
             <Typography
                 display={'flex'}
@@ -50,22 +74,22 @@ const Index = () => {
                         fontSize: '15px',
                     }}
                 />
-                Apollo Hospital, Dariya Road, Safarnama Colony, Asgard
+                {details?.destination}
             </Typography>
             <Box
                 display={'flex'}
                 gap={'1vw'}
             >
-                <Avatar
-                    src={'https://th.bing.com/th/id/OIP.jgxuVfmR9tNZSfSya-V-fwHaKm?pid=ImgDet&rs=1'}
-                />
+                <Avatar>
+                    {details?.docName[0]}{details?.docName?.split(' ')[1][0]}
+                </Avatar>
                 <Box
                     display={'flex'}
                     flexDirection={'column'}
                     justifyContent={'space-between'}
                 >
                     <Typography>
-                        Dr. Strange
+                        {details?.docName}
                     </Typography>
                     <Typography
                         sx={{
@@ -73,7 +97,7 @@ const Index = () => {
                             fontSize: '13px'
                         }}
                     >
-                        Cardiologist
+                        {details?.docField}
                     </Typography>
                 </Box>
             </Box>

@@ -83,7 +83,9 @@ function ResponsiveDrawer(props) {
 
                 </Box>
 
-                <ListItemButton>
+                <ListItemButton
+                    onClick={() => router.push('/')}
+                >
                     <ListItemIcon>
                         <HomeRoundedIcon />
                     </ListItemIcon>
