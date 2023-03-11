@@ -4,12 +4,13 @@ import {
   Button,
   Card,
   CardContent,
+  CircularProgress,
   Divider,
   Stack,
   Typography,
 } from "@mui/material";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import CreateIcon from "@mui/icons-material/Create";
@@ -20,7 +21,17 @@ import LocalHospitalOutlinedIcon from "@mui/icons-material/LocalHospitalOutlined
 import { ArrowLeft } from "@mui/icons-material";
 
 const Index = () => {
+
+  const [patient, setPatient] = useState(null);
+
+  useEffect(() => {
+    const patient = localStorage.getItem('patient')
+
+    setPatient(JSON.parse(patient));
+  }, [])
+
   return (
+<<<<<<< Updated upstream
     <Box
       px={2}
       sx={{
@@ -65,123 +76,219 @@ const Index = () => {
               fontSize: "25px",
             }}
           />
+=======
+    <>
+      {patient === null ?
+        <Box
+          minWidth={'100vw'}
+          minHeight={'100vh'}
+          margin={'auto'}
+        >
+          <CircularProgress />
+>>>>>>> Stashed changes
         </Box>
-      </Box>
-      <Box mt={10}>
-        <Avatar
+        :
+        <Box
+          px={2}
           sx={{
-            bgcolor: "purple",
-            width: "100px",
-            height: "100px",
-            margin: "auto",
-            fontSize: "20px",
+            flex: 3,
+            bgcolor: "white",
+            marginY: '30px',
+            borderRadius: '20px',
+            marginRight: '20px',
+            paddingBottom: '20px'
           }}
         >
-          M
-        </Avatar>
-        <Typography
-          fontSize={["15px", "25px"]}
-          textAlign="center"
-          marginTop={"30px"}
-        >
-          Monika Wrobel
-        </Typography>
-        <Typography marginTop={"auto"} textAlign="center">
-          35 years
-        </Typography>
-      </Box>
-      <Box
-        display={"flex"}
-        flexDirection={"row"}
-        justifyContent={"space-between"}
-        paddingX={"1vw"}
-        marginY={"30px"}
-      >
-        <Box display={"flex"} flexDirection={"column"}>
-          <Typography>
-            Blood
-            <br />
-            <Typography color={"#089aa4"}>A Rh+</Typography>
-          </Typography>
-        </Box>
-        <Divider
-          orientation="vertical"
-          sx={{
-            height: "55px",
-          }}
-        />
-        <Box display={"flex"} flexDirection={"column"}>
-          {" "}
-          <Typography>
-            Height
-            <br />
-            <Typography color={"#089aa4"}>160cm</Typography>
-          </Typography>
-        </Box>
-        <Divider
-          orientation="vertical"
-          sx={{
-            height: "55px",
-          }}
-        />
-        <Box display={"flex"} flexDirection={"column"}>
-          <Typography>
-            weight
-            <br />
-            <Typography color={"#089aa4"}>22kg</Typography>
-          </Typography>
-        </Box>
-      </Box>
-      <Box
-        flex={1}
-        display="flex"
-        flexDirection={'column'}
-        gap={['6vh," " ,10vh']}
-        justifyContent="space-between"
-        alignItems={"screenLeft"}
-        bgcolor={'transparent'}
-      >
-        <Card>
-          <CardContent>
+          <Box
+            flex={1}
+            display="flex"
+            gap={['6vh," " ,10vh']}
+            justifyContent="space-between"
+            alignItems={"screenLeft"}
+            mt={2}
+          >
+            <ArrowCircleLeftIcon
+              sx={{
+                color: "rgba(0, 0, 0, 0.2)",
+                fontSize: "35px",
+              }}
+            />
             <Box
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
+              display={'flex'}
+              gap={'0.7vw'}
             >
-              <Box>
-                <Typography sx={{ fondsiz: "14px", color: "black" }}>
-                  Dr.Pawel Kowalski
-                </Typography>
-                <Typography>02.11.2022</Typography>
-              </Box>
-              <InboxIcon
+              <CircleNotificationsIcon
                 sx={{
-                  color: "#089aa4",
-                  fontSize: "40px",
+                  color: "rgba(0, 0, 0, 0.2)",
+                  fontSize: "35px",
+                }}
+              />
+              <CreateIcon
+                sx={{
+                  color: "rgba(0, 0, 0, 0.2)",
+                  fontSize: "35px",
                 }}
               />
             </Box>
-            <Divider
-              orientation="horizontal"
+          </Box>
+          <Box mt={4}>
+            <Avatar
               sx={{
-                height: "60px",
+                bgcolor: "purple",
+                width: "70px",
+                height: "70px",
+                margin: "auto",
+                fontSize: "20px",
               }}
-            />
-            <Box>
-              <Typography paddingX={"1vw"}>
-                Hello Monical
+            >
+              {patient?.name[0]}
+            </Avatar>
+            <Typography
+              textAlign="center"
+              marginTop={"30px"}
+              fontFamily={'Ubuntu'}
+              fontWeight={600}
+              fontSize={'25px'}
+            >
+              {patient?.name}
+            </Typography>
+            <Typography marginTop={"auto"} textAlign="center">
+              35 years
+            </Typography>
+          </Box>
+          <Box
+            display={"flex"}
+            flexDirection={"row"}
+            justifyContent={"space-between"}
+            paddingX={"1vw"}
+            marginY={"30px"}
+          >
+            <Box display={"flex"} flexDirection={"column"}
+              textAlign={'center'}
+            >
+              <Typography>
+                Blood
                 <br />
+<<<<<<< Updated upstream
                 <Typography marginTop={"20px"}>
                   your test Result are pretty fine.
                   <br />
                   But I will prescribe somting....to keep the condition under
                   control
                 </Typography>
+=======
+                <Typography color={"#089aa4"} textAlign={'center'}>{patient?.bloodGroup}</Typography>
+>>>>>>> Stashed changes
               </Typography>
             </Box>
-          </CardContent>
-        </Card>
-        {/* <Box>
+            <Divider
+              orientation="vertical"
+              sx={{
+                height: "55px",
+              }}
+            />
+            <Box display={"flex"} flexDirection={"column"}
+              textAlign={'center'}
+            >
+              <Typography>
+                Height
+                <br />
+                <Typography color={"#089aa4"}>{patient?.height}cm</Typography>
+              </Typography>
+            </Box>
+            <Divider
+              orientation="vertical"
+              sx={{
+                height: "55px",
+              }}
+            />
+            <Box display={"flex"} flexDirection={"column"}
+              textAlign={'center'}
+            >
+              <Typography>
+                Weight
+                <br />
+                <Typography color={"#089aa4"}>{patient?.weight}KG</Typography>
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            flex={1}
+            display="flex"
+            flexDirection={'column'}
+            gap={['6vh," " ,10vh']}
+            justifyContent="space-between"
+            alignItems={"screenLeft"}
+            bgcolor={'transparent'}
+          >
+            <Card
+              sx={{
+                borderRadius: '20px'
+              }}
+            >
+              <CardContent
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '10px',
+                }}
+              >
+                <Box
+                  display={"flex"}
+                  alignItems={"center"}
+                  justifyContent={"space-between"}
+                  paddingX={'0.8vw'}
+                >
+                  <Box>
+                    <Typography sx={{ fontSize: "16px", fontFamily: 'Poppins', fontWeight: '600', color: "black" }}>
+                      Dr.Pawel Kowalski
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: 'Poppins',
+                        fontSize: '12px'
+                      }}
+                    >
+                      02.11.2022
+                    </Typography>
+                  </Box>
+                  <InboxIcon
+                    sx={{
+                      color: "#089aa4",
+                      fontSize: "25px",
+                    }}
+                  />
+                </Box>
+                <Divider
+                  orientation="horizontal"
+                  sx={{
+                  }}
+                />
+                <Box>
+                  <Typography paddingX={"1vw"}
+                    fontFamily={'Poppins'}
+                    fontWeight={600}
+                    fontSize={'17px'}
+                  >
+                    Hello <span
+                      style={{
+                        color: '#089AA4'
+                      }}
+                    >{patient.name.split(' ')[0]}</span>
+                    <br />
+                    <Typography marginTop={"5px"}
+                      fontFamily={'Poppins'}
+                      fontSize={'13.5px'}
+                    >
+                      Your test Result are pretty fine.
+                      But I'll prescribe somting....to keep the condition under
+                      control
+                    </Typography>
+                  </Typography>
+                </Box>
+              </CardContent>
+            </Card>
+            {/* <Box>
           <Stack direction="row" spacing={2}>
             <Button
               sx={{
@@ -206,6 +313,7 @@ const Index = () => {
             </Button>
           </Stack>
         </Box> */}
+<<<<<<< Updated upstream
         <Box
           display={'flex'}
           flexDirection={'column'}
@@ -232,11 +340,17 @@ const Index = () => {
               }
             }}
           >
+=======
+>>>>>>> Stashed changes
             <Box
               display={'flex'}
-              alignItems={'center'}
-              gap={'0.7vw'}
+              flexDirection={'column'}
+              mt={3}
+              gap={'1vw'}
+            // alignItems={'flex-start'}
+            // paddingLeft={'5vw'}
             >
+<<<<<<< Updated upstream
               <SickOutlinedIcon />
               Diseases
             </Box>
@@ -315,6 +429,109 @@ const Index = () => {
     </Box>
 
 
+=======
+              <Button
+                sx={{
+                  border: '1px solid rgba(0, 0, 0, 0.2)',
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  paddingLeft: '3vw',
+                  borderRadius: '10px',
+                  gap: '1vw',
+                  color: '#089AA4',
+                  paddingY: '15px',
+                  ":hover": {
+                    backgroundColor: '#089AA4',
+                    color: 'white'
+                  }
+                }}
+              >
+                <Box
+                  display={'flex'}
+                  alignItems={'center'}
+                  gap={'0.7vw'}
+                >
+                  <SickOutlinedIcon />
+                  Diseases
+                </Box>
+                <ArrowLeft
+                  sx={{
+                    transform: 'rotate(180deg)'
+                  }}
+                />
+
+              </Button>
+              <Button
+                sx={{
+                  border: '1px solid rgba(0, 0, 0, 0.2)',
+                  width: '100%',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  paddingLeft: '3vw',
+                  borderRadius: '10px',
+                  gap: '1vw',
+                  color: '#089AA4',
+                  paddingY: '15px',
+                  ":hover": {
+                    backgroundColor: '#089AA4',
+                    color: 'white'
+                  }
+                }}
+              >
+                <Box
+                  display={'flex'}
+                  alignItems={'center'}
+                  gap={'0.7vw'}
+                >
+                  <LocalHospitalOutlinedIcon />
+                  My Visits
+                </Box>
+                <ArrowLeft
+                  sx={{
+                    transform: 'rotate(180deg)'
+                  }}
+                />
+              </Button>
+              <Button sx={{
+                border: '1px solid rgba(0, 0, 0, 0.2)',
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                paddingLeft: '3vw',
+                borderRadius: '10px',
+                gap: '1vw',
+                color: '#089AA4',
+                paddingY: '15px',
+                ":hover": {
+                  backgroundColor: '#089AA4',
+                  color: 'white'
+                }
+              }}
+              >
+                <Box
+                  display={'flex'}
+                  alignItems={'center'}
+                  gap={'0.7vw'}
+                >
+                  <FavoriteBorderIcon />
+                  Health Monitor
+
+                </Box> <ArrowLeft
+                  sx={{
+                    transform: 'rotate(180deg)'
+                  }}
+                />
+              </Button>
+            </Box>
+          </Box>
+        </Box>
+      }
+    </>
+>>>>>>> Stashed changes
   );
 };
 

@@ -21,6 +21,7 @@ import LocalHospitalRoundedIcon from '@mui/icons-material/LocalHospitalRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import TimelineRoundedIcon from '@mui/icons-material/TimelineRounded';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import { useRouter } from 'next/router';
 
 const drawerWidth = 240;
 
@@ -31,6 +32,9 @@ function ResponsiveDrawer(props) {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+
+
+    const router = useRouter();
 
     const drawer = (
 
@@ -113,16 +117,25 @@ function ResponsiveDrawer(props) {
             </List>
 
             <List>
-                {['Settings', 'Log out'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <SettingsIcon /> : <LogoutRoundedIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
+                <ListItem key={'Settings'} disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <SettingsIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={'Settings'} />
+                    </ListItemButton>
+                </ListItem>
+
+                <ListItem key={'Log Out'} disablePadding>
+                    <ListItemButton
+                        onClick={() => {localStorage.removeItem('patient'); router.replace('/authenticate')}}
+                    >
+                        <ListItemIcon>
+                            <LogoutRoundedIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={'Log Out'} />
+                    </ListItemButton>
+                </ListItem>
             </List>
         </Box>
 
