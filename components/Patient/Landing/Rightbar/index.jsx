@@ -6,8 +6,7 @@ const Index = () => {
     <Box
         sx={{
             flex: 2,
-            bgcolor: 'black',
-            minHeight: '100vh'
+            minHeight: '100vh',    
         }}
     >
         Rightbar

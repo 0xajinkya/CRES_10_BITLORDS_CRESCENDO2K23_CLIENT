@@ -7,7 +7,9 @@ const Index = () => {
         sx={{
             flex: 1.5,
             bgcolor: 'red',
-            minHeight: '100vh'
+            minHeight: '100vh',
+
+            
         }}
     >
         Sidebar
