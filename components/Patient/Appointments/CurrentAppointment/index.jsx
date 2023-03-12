@@ -8,9 +8,9 @@ const Index = () => {
     <Box
       sx={{
         flex: 9,
-        minHeight: '100vh',
-        paddingX: '2vw',
-        paddingTop: '3vh',
+        // minHeight: '100vh',
+        paddingX: '0vw',
+        paddingTop: '1vh',
         display: 'flex',
         flexDirection: 'column',
         gap: '1vh',
