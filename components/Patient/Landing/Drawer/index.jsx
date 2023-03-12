@@ -52,8 +52,8 @@ function ResponsiveDrawer(props) {
 
                 <Box
                     sx={{
-                        paddingX: '1vw',
-                        paddingRight: '1vw'
+                        // paddingX: '1vw',
+                        paddingRight: '2vw'
                     }}
                 >
 
@@ -71,7 +71,8 @@ function ResponsiveDrawer(props) {
                             padding: '0.8vw',
                             color: 'black',
                             backgroundColor: '#eeeeee',
-                            borderRadius: 4
+                            borderRadius: 4,
+
                         }}
                     />
 
@@ -91,7 +92,9 @@ function ResponsiveDrawer(props) {
                     </ListItemIcon>
                     <ListItemText primary="Home" />
                 </ListItemButton>
-                <ListItemButton>
+                <ListItemButton
+                    onClick={() => router.push('/appointments')}
+                >
                     <ListItemIcon>
                         <CalendarMonthRoundedIcon />
                     </ListItemIcon>
@@ -109,7 +112,9 @@ function ResponsiveDrawer(props) {
                     </ListItemIcon>
                     <ListItemText primary="Medication" />
                 </ListItemButton>
-                <ListItemButton>
+                <ListItemButton
+                    onClick={() => router.push('/sensorData')}
+                >
                     <ListItemIcon>
                         <TimelineRoundedIcon />
                     </ListItemIcon>

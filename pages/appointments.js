@@ -1,10 +1,10 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import Landing from '../components/Patient/Landing';
+import Appointments from '../components/Patient/Appointments'
 const Index = () => {
   return (
     <Box>
-        <Landing />
+     <Appointments/>
     </Box>
   )
 }
