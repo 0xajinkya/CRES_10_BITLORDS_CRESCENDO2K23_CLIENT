@@ -165,7 +165,7 @@ const Index = () => {
             alignItems={"screenLeft"}
             bgcolor={'transparent'}
           >
-            {/* <Card
+            <Card
               sx={{
                 borderRadius: '20px'
               }}
@@ -225,13 +225,13 @@ const Index = () => {
                       fontSize={'13.5px'}
                     >
                       Your test Result are pretty fine.
-                      But I&apos;ll prescribe somting....to keep the condition under
+                      But I will prescribe somthing....to keep the condition under
                       control
                     </Typography>
                   </Typography>
                 </Box>
               </CardContent>
-            </Card> */}
+            </Card>
             {/* <Box>
           <Stack direction="row" spacing={2}>
             <Button

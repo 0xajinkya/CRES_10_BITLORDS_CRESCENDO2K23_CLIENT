@@ -35,7 +35,7 @@ const Index = () => {
           fontWeight: 500
         }}
       >
-        Welcome, {patient.name}
+        Welcome, {patient?.name}
       </Typography>
       <Typography
         sx={{
