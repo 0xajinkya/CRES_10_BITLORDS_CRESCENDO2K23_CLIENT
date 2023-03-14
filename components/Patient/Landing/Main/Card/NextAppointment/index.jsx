@@ -111,7 +111,7 @@ const Index = () => {
                     sx={{
                         border: '1px solid #089aa4',
                         color: '#089aa4',
-                        width: '50%',
+                        width: '70%',
                         ":hover": {
                             backgroundColor: '#089aa4',
                             color: 'white'

@@ -1,9 +1,13 @@
 import React from 'react'
 import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts'
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
 // import Heart from '../components/Patient/Graph/Heart'
 import Heart from '../components/Patient/Graph/Heart';
 import Sugar from '../components/Patient/Graph/Sugar';
+import { Home, Logout, Timeline } from '@mui/icons-material';
+import { useRouter } from 'next/router';
+
+
 
 const Index = () => {
 
@@ -51,8 +55,52 @@ const Index = () => {
       //"amt": 2100
     }
   ]
-
+  const router = useRouter();
   return (
+    <Box>
+      <Box
+            sx={{
+              backgroundColor: 'white',
+              // borderRadius: '20px',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'flex-start',
+              paddingLeft: '2.5vw',
+              gap: '5vh',
+              paddingY: '1vh'
+            }}
+          >
+            <Button
+              sx={{
+                color: '#089AA4',
+                
+      
+              }}
+              onClick={() => router.push('/')}
+            >
+              <Home sx={{ marginRight:'0.5vw'}} />
+              Home
+            </Button>
+
+            <Button
+              sx={{
+                color: '#089AA4'
+              }}
+              onClick={() => router.push('/sensorData')}
+            >
+              <Timeline  sx={{ marginRight:'0.5vw'}}/>
+              Sensor Data
+            </Button>
+            <Button
+              sx={{
+                color: '#089AA4'
+              }}
+              onClick={() => {localStorage.removeItem('patient');router.push('/authenticate')}}
+            >
+              <Logout sx={{ marginRight:'0.5vw'}} />
+              Logout
+            </Button>
+          </Box>
     <Box
     
     sx={{
@@ -92,7 +140,15 @@ const Index = () => {
       </Box>
       <Box>
         < Sugar/>
+        
       </Box>
+      
+    </Box>
+
+    
+
+
+
     </Box>
   )
 }

@@ -1,49 +1,49 @@
 import React from 'react'
 import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts'
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const Index = () => {
 
     const data = [
         {
             "name": "Mon",
-            "sys": 160,
+            "Mmol/L": 160,
             //   "dia": 98,
             //"amt": 2400
         },
         {
             "name": "Tue",
-            "sys": 170,
+            "Mmol/L": 190,
             //   "dia": 105,
             //"amt": 2210
         },
         {
             "name": "Wed",
-            "sys": 165,
+            "Mmol/L": 250,
             //   "dia": 110,
             //"amt": 2290
         },
         {
             "name": "Thu",
-            "sys": 162,
+            "Mmol/L": 130,
             //   "dia": 120,
             //"amt": 2000
         },
         {
             "name": "Fri",
-            "sys": 175,
+            "Mmol/L": 175,
             //   "dia": 99,
             //"amt": 2181
         },
         {
             "name": "Sat",
-            "sys": 172,
+            "Mmol/L": 300,
             //   "dia": 105,
             //"amt": 2500
         },
         {
             "name": "Sun",
-            "sys": 168,
+            "Mmol/L": 120,
             //   "dia": 100,
             //"amt": 2100
         }
@@ -52,6 +52,7 @@ const Index = () => {
     return (
         <Box
             mt={1}
+            // sx={{backgroundColor:'black'}}
         >
             <AreaChart width={400} height={180} data={data}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
@@ -69,9 +70,35 @@ const Index = () => {
                 <YAxis />
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
-                <Area type="monotone" dataKey="sys" stroke="#8884d8" fillOpacity={1} fill="url(#colorsys)" />
-                <Area type="monotone" dataKey="dia" stroke="#82ca9d" fillOpacity={1} fill="url(#colordia)" />
+                <Area type="monotone" dataKey="Mmol/L" stroke="#8884d8" fillOpacity={1} fill="url(#colorsys)" />
+                {/* <Area type="monotone" dataKey="dia" stroke="#82ca9d" fillOpacity={1} fill="url(#colordia)" /> */}
             </AreaChart>
+
+
+
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    mt: 2,
+                }}
+            >
+
+                <Typography
+                
+                       
+
+                >
+                    
+                        Weekly Report of Sugar Test 
+                        <br />
+
+                        Unit :-  (bpm)
+
+                    </Typography>           
+            </Box>
+
         </Box>
     )
 }
